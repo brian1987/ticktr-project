@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  sports: 1
+  concert: 1
+  baseball: 1
+
+two:
+  email: MyString
+  sports: 1
+  concert: 1
+  baseball: 1

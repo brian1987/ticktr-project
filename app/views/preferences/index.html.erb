@@ -1,0 +1,33 @@
+<h1>Listing preferences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Sports</th>
+      <th>Concert</th>
+      <th>Baseball</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @preferences.each do |preference| %>
+      <tr>
+        <td><%= preference.email %></td>
+        <td><%= preference.sports %></td>
+        <td><%= preference.concert %></td>
+        <td><%= preference.baseball %></td>
+        <td><%= link_to 'Show', preference %></td>
+        <td><%= link_to 'Edit', edit_preference_path(preference) %></td>
+        <td><%= link_to 'Destroy', preference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preference', new_preference_path %>

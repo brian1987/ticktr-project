@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @preference.email %>
+</p>
+
+<p>
+  <strong>Sports:</strong>
+  <%= @preference.sports %>
+</p>
+
+<p>
+  <strong>Concert:</strong>
+  <%= @preference.concert %>
+</p>
+
+<p>
+  <strong>Baseball:</strong>
+  <%= @preference.baseball %>
+</p>
+
+<%= link_to 'Edit', edit_preference_path(@preference) %> |
+<%= link_to 'Back', preferences_path %>
