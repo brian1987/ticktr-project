@@ -3,7 +3,22 @@
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
+    <strong>Zip Code:</strong>
+  <%= @user.zip_code %>
+
 </p>
+
+<p> <% @events.each do |event| %>
+  <%= event[:url] %> </br>
+</br>
+  <%= event[:title] %> </br>
+  </br>
+
+  <% end %>
+
+
+</p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
