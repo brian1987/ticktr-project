@@ -33,6 +33,7 @@ group :doc do
 end
 
 gem 'seatgeek'
+gem 'pry'
 
 group :devlopment, :test do
   gem 'rspec-rails'

@@ -1,17 +1,25 @@
 require 'spec_helper'
 
 describe "User" do
-	let(:user){User.create(:email => "email@email.com")}
 
-before do
-	user
-end
+	before {@user = User.create(:email => "email@email.com", :zip_code => "10004", :concerts => 0, :sports => 0)}
 
-	describe "#email" do
-		it "has an email" do
-			expect(User.find_by(email: "email@email.com")).not_to be(nil)
+	it { expect(@user.email).to eq("email@email.com") }
+	it { expect(@user.zip_code).to eq("10004") }
+
+	describe "#like" do
+		it "allows the user to like things" do
+			# event_type = "concerts"
+			@user.like("concert")
+			expect(@user.concerts).to eq(1)
 		end
 	end
 
+	describe "#dislike" do
+		it "allows the user to dislike things" do
+			event_type = "sports"
+			expect(@user.sports).to eq(0)
+		end
+	end
 
 end
