@@ -35,7 +35,9 @@ class UsersController < ApplicationController
         @user.save
         render 'new'
       end
-    
+    rescue ActiveRecord::RecordInvalid
+      flash[:error] = "oops"
+      render :action => :new
   end
 
   # PATCH/PUT /users/1
