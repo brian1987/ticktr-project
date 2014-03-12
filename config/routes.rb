@@ -1,4 +1,6 @@
 TicktrProject::Application.routes.draw do
+  resources :events
+
   resources :preferences
 
   resources :users

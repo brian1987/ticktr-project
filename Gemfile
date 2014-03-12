@@ -34,6 +34,9 @@ end
 
 gem 'seatgeek'
 gem 'pry'
+gem 'sidekiq'
+gem 'sidekiq-middleware'
+gem 'recommendable'
 
 group :devlopment, :test do
   gem 'rspec-rails'

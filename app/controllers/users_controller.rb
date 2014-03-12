@@ -10,8 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @seatgeek = SeatGeekApiConnect.new(@user.zip_code.to_i)
-    @events = @seatgeek.get_sports
+    @seatgeek = SeatGeekApiConnect.new(@user.postal_code.to_i)
+    @events = @seatgeek.get_sports + @seatgeek.get_concerts
   end
 
   # GET /users/new
@@ -70,6 +70,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :zip_code)
+      params.require(:user).permit(:email, :postal_code)
     end
 end

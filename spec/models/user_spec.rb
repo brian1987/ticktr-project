@@ -2,10 +2,11 @@ require 'spec_helper'
 
 describe "User" do
 
-	before {@user = User.create(:email => "email@email.com", :zip_code => "10004", :concerts => 0, :sports => 0)}
+	before {@user = User.create(:name => "Bob", :email => "email@email.com", :postal_code => "10004", :concerts => 0, :sports => 0)}
 
 	it { expect(@user.email).to eq("email@email.com") }
-	it { expect(@user.zip_code).to eq("10004") }
+	it { expect(@user.postal_code).to eq("10004") }
+	it { expect(@user.name).to eq("Bob") }
 
 	describe "#like" do
 		it "allows the user to like things" do
