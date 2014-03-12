@@ -12,14 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :zip_code %><br>
-    <%= f.text_field :zip_code %>
+    <%= f.label "Where the fuck are you?" %><br>
+    <%= f.text_field :postal_code %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <input type="submit" value="Find me some tix">
   </div>
 <% end %>

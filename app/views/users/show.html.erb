@@ -4,14 +4,12 @@
   <strong>Email:</strong>
   <%= @user.email %>
     <strong>Zip Code:</strong>
-  <%= @user.zip_code %>
+  <%= @user.postal_code %>
 
 </p>
 
 <p> <% @events.each do |event| %>
-  <%= event[:url] %> </br>
-</br>
-  <%= event[:title] %> </br>
+  <%= link_to event[:title], event[:url] %> </br>
 </br>
 
   <% end %>

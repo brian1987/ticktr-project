@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'SeatGeekApiConnect' do 
-  let(:connection){SeatGeekApiConnect.new(:zip_code => "10009")}
+  let(:connection){SeatGeekApiConnect.new(:postal_code => "10009")}
 
   before do 
     connection

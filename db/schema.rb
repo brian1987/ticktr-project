@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140311232518) do
 
   create_table "users", force: true do |t|
     t.string   "email"
-    t.string   "zip_code"
+    t.string   "postal_code"
     t.integer  "concerts"
     t.integer  "sports"
     t.datetime "created_at"
