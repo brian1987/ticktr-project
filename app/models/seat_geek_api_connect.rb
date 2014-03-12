@@ -1,4 +1,3 @@
-# require 'seatgeek'
 class SeatGeekApiConnect
 
   attr_accessor :events
@@ -6,10 +5,6 @@ class SeatGeekApiConnect
   def initialize(postal_code)
     @postal_code = postal_code
   end
-
-  # def valid?(postal_code)
-  # postal_code.length != 5
-  # end
 
   def get_events
     formatted_events = []
@@ -19,9 +14,8 @@ class SeatGeekApiConnect
       @events["events"].each do |event|
         formatted_events << {:url => event["url"], :title => event["title"], :time => event["datetime_local"]}
       end
-      # end
     end
     formatted_events
   end
-#
 end
+
