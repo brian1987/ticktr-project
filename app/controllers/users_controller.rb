@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @seatgeek = SeatGeekApiConnect.new(@user.zip_code.to_i)
+    @seatgeek = SeatGeekApiConnect.new(@user.postal_code.to_i)
     @events = @seatgeek.get_sports
   end
 
