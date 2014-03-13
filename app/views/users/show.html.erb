@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
+<center><p id="notice"><%= notice %></p>
 
 <p>
-		<strong>STUFF FOR</strong>
-    <strong>Zip Code:</strong>
-  <%= @user.postal_code %>
+  <strong> Ohhh snap you live in the <%= @user.postal_code %> ??? </br></strong>
+    <strong>THESE EVENTS ARE IN YOUR AREA....</strong>  
+  
 
 </p>
 
 <p> <% @events.each do |event| %>
-  <%= link_to event[:title], event[:url] %> <%=event[:time] %> </br>
+  <%= link_to event[:title], event[:url] %> - <%=event[:time] %> </br>
 </br>
 
   <% end %>
 
-
+<strong>CLICK THE LINK AND BUY THE TIX</strong></br>
+</br>
+</br>
+You into any of this?
 </p>
 
 <FORM>
 	<INPUT TYPE="button" onClick="history.go(0)" VALUE="This stuff sucks">
 </FORM>
 
-<%= link_to 'Somewhere else', new_user_path(@user) %> |
-<%= link_to 'Past searches', users_path %>
+<%= link_to 'Hold up...this ain\'t my area', new_user_path(@user) %> |
+<%= link_to 'Where did I look for tickets again?', users_path %></center>
