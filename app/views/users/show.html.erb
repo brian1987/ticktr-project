@@ -9,7 +9,7 @@
 </p>
 
 <p> <% @events.each do |event| %>
-  <%= link_to event[:title], event[:url] %> - <%=event[:time] %> </br>
+  <%= link_to event[:title], event[:url] %> - <text style="font-size:8pt;"><%=event[:time] %></text> </br>
 </br>
 
   <% end %>
@@ -17,7 +17,7 @@
 <strong>CLICK THE LINK AND BUY THE TIX</strong></br>
 </br>
 </br>
-You into any of this?
+<text style="font-size:12pt;">You into any of this?</text>
 </p>
 
 <FORM>
