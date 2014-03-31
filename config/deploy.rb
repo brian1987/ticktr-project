@@ -1,4 +1,5 @@
 require 'bundler/capistrano' # for bundler support
+load 'deploy/assets'
 
 set :application, "ticktr"
 set :repository,  "git@github.com:joanieS/ticktr-project.git"
