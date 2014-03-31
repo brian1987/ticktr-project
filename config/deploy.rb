@@ -33,7 +33,7 @@ namespace :deploy do
   end
 
   task :symlink_database, :roles => :app do
-      run  "#{try_sudo} ln-nfs #{shared_path}/production.sqlite3 #{current_path}/db/prodution.sqlite3"
+      run  "#{try_sudo} ln -nfs #{shared_path}/production.sqlite3 #{current_path}/db/prodution.sqlite3"
   end
 
   task :migrate, :roles => :app do
