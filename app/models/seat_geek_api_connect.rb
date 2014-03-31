@@ -14,7 +14,6 @@ class SeatGeekApiConnect
       @events = SeatGeek::Connection.events({:type => "#{@event_type}", :postal_code => @postal_code})
       @events["events"].each do |event|
         @event_datetime = []
-        # @event_datetime << event["datetime_local"].to_date.strftime("%A %B %d %Y") << event["datetime_local"].to_datetime.strftime("%l:%M %p")
         @event_datetime << event["datetime_local"].to_date.strftime("%A %m/%d/%y") << event["datetime_local"].to_datetime.strftime("%l:%M %p")
         formatted_events << {:url => event["url"], :title => event["title"], :time => "#{@event_datetime.to_s.gsub!('"','').gsub!('[','').gsub!(']','').gsub!(',',' at')}"}
       end
