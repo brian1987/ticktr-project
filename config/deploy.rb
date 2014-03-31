@@ -31,4 +31,15 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
+
+  task :symlink_database, :roles => :app do
+      run  "#{try_sudo} ln-nfs #{shared_path}/production.sqlite3 #{current_path}/db/prodution.sqlite3"
+  end
+
+  task :migrate, :roles => :app do
+      run "#{try_sudo} cd #{current_path} && RAILS_ENV=production bundle exec rake db:migrate"
+  end
 end
+
+before "deploy:restart", "deploy:migrate"
+after "deploy:finalize_update", "deploy:symlink_database"
