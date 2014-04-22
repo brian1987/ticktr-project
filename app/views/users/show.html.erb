@@ -8,11 +8,26 @@
 
 </p>
 
-<p> <% @events.each do |event| %>
-  <%= link_to event[:title], event[:url] %> - <text style="font-size:8pt;"><%=event[:time] %></text> </br>
+<table>
+  <thead>
+    <tr>
+      <th class="zip-header"></th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @events.each do |event| %>
+  	<tr class="spaceUnder">
+  		<td><%= link_to event[:title], event[:url]%></br></td>
+  		<td><%=event[:time] %> <% end %></td>
+  	</tr>
+  </tbody>
+</table>
+
+<p> 
+
 </br>
 
-  <% end %>
+ 
 
 </br>
 
