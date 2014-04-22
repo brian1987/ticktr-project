@@ -72,6 +72,10 @@ p, ol, ul, td {
   line-height: 18px;
   font-color: #deddda;
 }
+tr.spaceUnder > td
+{
+  padding-bottom: 1em;
+}
 
 .footer {
     background-image:url("ticktr_bottom.jpg");
