@@ -1,4 +1,6 @@
-An attempt at a project with Tom, Joan, and Brian
+Ticktr is a rails application that is designed to help you find random events in your area.
 
 
-Slides here: http://slid.es/joansoskin/deck
+Ticktr connects with the SeatGeek API to connect you with Tickets to fun events in your area.
+
+See the slides from our NYC on Rails presentation here: http://slid.es/joansoskin/deck
