@@ -1,7 +1,7 @@
 <center><p id="notice"><%= notice %></p>
 
 <p>
-  <h3> <strong> Ohhh snap you live in the <%= @user.postal_code %> ??? </br></strong></h3>
+  <h3> <strong> So you live in <%= @user.postal_code %> ? </br></strong></h3>
     <h4>THESE EVENTS ARE IN YOUR AREA:</h4>  
   </br>
   
@@ -14,15 +14,15 @@
 
   <% end %>
 
-<strong>CLICK THE LINK AND BUY THE TIX</strong></br>
+<strong>CLICK THE LINK AND BUY THE TICKETS</strong></br>
 </br>
 </br>
-<text style="font-size:12pt;">You into any of this?</text>
+<text style="font-size:12pt;">Interested in any of these events?</text>
 </p>
 
 <FORM>
-	<INPUT TYPE="button" onClick="history.go(0)" VALUE="This stuff sucks">
+	<INPUT TYPE="button" onClick="history.go(0)" VALUE="No thanks. Got anything else?">
 </FORM>
 
-<%= link_to 'Hold up...this ain\'t my area', new_user_path(@user) %> |
+<%= link_to 'Hold on...this isn\'t my area', new_user_path(@user) %> |
 <%= link_to 'Where did I look for tickets again?', users_path %></center>
